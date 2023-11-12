@@ -1,7 +1,13 @@
 ### Add Gun
 -------------
 
-People keep telling me to "Add Gun". So fine, I'm adding it.
+"People keep telling me to 'Add Gun'. So fine, I'm adding it." -ProgrammerDan
+
+AddGun is a standalone plugin allow you to use an vanilla item as a gun featuring magazine, bullet, repair, loading, aiming, and custom damage! AddGun was made for a Civ server called Devoted which it never carry over to another Civ server since then. I (KingColton1) decided to fork ProgrammerDan's AddGun to continue the project and turn from being "Civ-only plugin" to a standalone, independent plugin where you can use them in any Minecraft servers without needing another plugin to make this work!
+
+Concerning the CombatTag, I plan to have this plugin be flexible with all kind of CombatTag plugins by either; provide ID numbers of items that are used for this plugin or whatsoever. I'll figure out with this later.
+
+v INSTRUCTION / MANUAL v
 
 ## The Basics
 --------------
