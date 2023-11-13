@@ -8,9 +8,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.programmerdan.minecraft.addgun.AddGun;
-
-import vg.civcraft.mc.civmodcore.inventorygui.Clickable;
-import vg.civcraft.mc.civmodcore.inventorygui.ClickableInventory;
+import com.programmerdan.minecraft.addgun.inventorygui.Clickable;
+import com.programmerdan.minecraft.addgun.inventorygui.ClickableInventory;
 
 
 /**

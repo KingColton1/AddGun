@@ -10,6 +10,7 @@ import com.programmerdan.minecraft.addgun.AddGun;
 import com.programmerdan.minecraft.addgun.ammo.Bullet;
 import com.programmerdan.minecraft.addgun.ammo.Magazine;
 import com.programmerdan.minecraft.addgun.guns.StandardGun;
+import com.programmerdan.minecraft.addgun.events.ItemSafeEvent;
 
 import org.bukkit.inventory.ItemStack;
 
