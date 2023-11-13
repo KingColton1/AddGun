@@ -39,6 +39,7 @@
 							<exclude>com/programmerdan/minecraft/addgun/**/*Test.class</exclude>
 						</excludes>
 					</instrumentation>
+					<check/>
 				</configuration>
 				<executions>
 					<execution>
@@ -71,6 +72,7 @@
 					<formats>
 						<format>html</format>
 					</formats>
+					<check/>
 				</configuration>
 				<reportSets>
 					<reportSet>
@@ -87,10 +89,6 @@
 		<repository>
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-		</repository>
-		<repository>
-			<id>devoted-repo</id>
-			<url>https://build.devotedmc.com/plugin/repository/everything/</url>
 		</repository>
 	</repositories>
 
@@ -114,28 +112,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>vg.civcraft.mc.civmodcore</groupId>
-			<artifactId>CivModCore</artifactId>
-			<version>1.6.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.biggestnerd.devotedpvp</groupId>
-			<artifactId>DevotedPvP</artifactId>
-			<version>1.2.2</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.minelink</groupId>
-			<artifactId>CombatTagPlus</artifactId>
-			<version>1.3.1-SNAPSHOT</version>
-			<scope>provided</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.mcstats.bukkit</groupId>
-					<artifactId>metrics-lite</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.15.2-R0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

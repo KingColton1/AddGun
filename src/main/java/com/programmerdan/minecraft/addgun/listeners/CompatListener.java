@@ -6,7 +6,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import com.biggestnerd.devotedpvp.ItemSafeEvent;
 import com.programmerdan.minecraft.addgun.AddGun;
 import com.programmerdan.minecraft.addgun.ammo.Bullet;
 import com.programmerdan.minecraft.addgun.ammo.Magazine;

@@ -78,8 +78,6 @@ public class AddGun  extends JavaPlugin {
 		registerPlayerListener();
 		registerCommandHandler();
 		registerCompatListener();
-		
-		createTagUtility();
 	}
 	
 	@Override
@@ -202,19 +200,6 @@ public class AddGun  extends JavaPlugin {
 		try {
 			if (this.getServer().getPluginManager().isPluginEnabled("DevotedPvP")) {
 				this.getServer().getPluginManager().registerEvents( new CompatListener(), this);
-			}
-		} catch (Exception e) {
-			this.warning("Unable to start Compat listener, DevotedPvP not installed.");
-		}
-	}
-	
-	private void createTagUtility() {
-		if (!this.isEnabled()) return;
-		try {
-			if (this.getServer().getPluginManager().isPluginEnabled("CombatTagPlus")) {
-				this.tagUtility = new CTPTagUtility();
-			} else {
-				this.tagUtility = new NullTagUtility();
 			}
 		} catch (Exception e) {
 			this.warning("Unable to start Compat listener, DevotedPvP not installed.");
