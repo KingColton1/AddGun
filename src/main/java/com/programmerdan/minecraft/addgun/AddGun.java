@@ -30,6 +30,7 @@ public class AddGun  extends JavaPlugin {
 	private static AddGun instance;
 	private CommandHandler commandHandler;
 	private PlayerListener playerListener;
+	private TagUtility tagUtility;
 
 	private Map<String, BasicGun> customGuns;
 	
@@ -199,6 +200,10 @@ public class AddGun  extends JavaPlugin {
 		} catch (Exception e) {
 			this.warning("Unable to start Compat listener, DevotedPvP not installed.");
 		}
+	}
+
+	public TagUtility getTagUtility() {
+		return this.tagUtility;
 	}
 
 	private void config(FileConfiguration config) {
