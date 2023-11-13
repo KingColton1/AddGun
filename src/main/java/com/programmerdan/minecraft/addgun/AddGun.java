@@ -2,17 +2,13 @@ package com.programmerdan.minecraft.addgun;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -34,7 +30,6 @@ public class AddGun  extends JavaPlugin {
 	private static AddGun instance;
 	private CommandHandler commandHandler;
 	private PlayerListener playerListener;
-	private TagUtility tagUtility;
 
 	private Map<String, BasicGun> customGuns;
 	
@@ -205,10 +200,6 @@ public class AddGun  extends JavaPlugin {
 			this.warning("Unable to start Compat listener, DevotedPvP not installed.");
 		}
 	}
-	
-	public TagUtility getTagUtility() {
-		return this.tagUtility;
-	}
 
 	private void config(FileConfiguration config) {
 		ConfigurationSection global = config.getConfigurationSection("global");
@@ -333,7 +324,9 @@ public class AddGun  extends JavaPlugin {
 						basicGun = (BasicGun) constructBasic.newInstance();
 						possibleGuns.put(basicGun.getName(), basicGun);
 						info("Created a new Gun Manager for custom gun of type {0}", clazz.getName());
-					} catch (Exception e) {}
+					} catch (Exception e) {
+						severe("Error creating a new Gun Manager: ", e);
+					}
 				}
 			}
 		} catch (IOException ioe) {
@@ -445,7 +438,6 @@ public class AddGun  extends JavaPlugin {
 
 	/**
 	 * Live on/off debug message at INFO level.
-	 *
 	 * Skipped if `debug` in root config is false.
 	 */
 	public void debug(String message) {
@@ -457,7 +449,6 @@ public class AddGun  extends JavaPlugin {
 	/**
 	 * Live on/off debug message  at INFO level with ellipsis notation
 	 * shortcut for deferred injection argument array.
-	 *
 	 * Skipped if `debug` in root config is false.
 	 */
 	public void debug(String message, Object... vars) {
